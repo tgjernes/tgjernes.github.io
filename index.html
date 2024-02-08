@@ -1,7 +1,459 @@
 <!DOCTYPE html>
+
+<head>
+
+	<title>Golden Ears Flying Club</title>
+	
+	<!--Set site favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	
+	<!-- Load CSS Style Sheets -->
+	<link href="css/login.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/jPages.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/animate.css" rel="stylesheet"  type="text/css" media="screen" />
+	<link href="css/swipebox.css" rel="stylesheet"  type="text/css" media="screen" />
+	<link href="css/showhide.css" rel="stylesheet"  type="text/css" media="screen" />
+	
+	<!-- Load Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+		
+	<!-- Load Javascripts -->
+	<script src="js/jquery-1.11.1.min.js"> type="text/javascript" </script>
+	<script src="js/jquery.leanModal.min.js"> type="text/javascript" </script>
+	<script src="js/jPages.js"> type="text/javascript" </script>
+	<script src="js/jquery.swipebox.js"> type="text/javascript" </script>
+	
+	<!-- Load top banner fade -->
+	<script>
+		  $(function(){
+		  $('.faderandom > :gt(0)').hide();
+		  setInterval(function(){
+		    var rand = Math.floor(Math.random() * ($('.faderandom').children().length-1));
+		    $('.faderandom > :first-child').appendTo('.faderandom').fadeOut();
+		    $('.faderandom > *').eq(rand).prependTo('.faderandom').fadeIn();
+		  }, 5000);
+		});
+	</script>
+	
+	<!-- Load the Gallery -->
+	<script>
+		/* when document is ready */
+		$(function(){
+			/* initiate plugin */
+			$("div.holder").jPages({
+				containerID: "itemContainer"
+			});
+		});
+	</script>
+	
+	<!-- Load the Show Hide -->
+	<script>
+		function showHide(shID) {
+		   if (document.getElementById(shID)) {
+		      if (document.getElementById(shID+'-show').style.display != 'none') {
+		         document.getElementById(shID+'-show').style.display = 'none';
+		         document.getElementById(shID).style.display = 'block';
+		      }
+		      else {
+		         document.getElementById(shID+'-show').style.display = 'inline';
+		         document.getElementById(shID).style.display = 'none';
+		      }
+		   }
+		}
+	</script>
+	
+	<!-- Load the Google Maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(49.214, -122.707),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+        	
+</head>
+
 <html>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+	<div id="wrapper">
+			
+		<!-- Revolving top banner and site logo -->
+		<div id="banner">
+			<img src="images/banners/bannerBase.jpg"/>
+			<div class="faderandom">
+				<!-- Add aditional images here -->
+				<img src="images/banners/banner01.jpg"/>
+				<img src="images/banners/banner02.jpg"/>
+				<img src="images/banners/banner03.jpg"/>
+				<img src="images/banners/banner04.jpg"/>
+				<img src="images/banners/banner05.jpg"/>
+				<img src="images/banners/banner06.jpg"/>
+				<img src="images/banners/banner07.jpg"/>
+				<img src="images/banners/banner08.jpg"/>
+				<img src="images/banners/banner09.jpg"/>
+				<img src="images/banners/banner10.jpg"/>
+				<img src="images/banners/banner11.jpg"/>
+				<img src="images/banners/banner12.jpg"/>
+				<img src="images/banners/banner13.jpg"/>
+				<img src="images/banners/banner14.jpg"/>
+				<img src="images/banners/banner15.jpg"/>
+				<img src="images/banners/banner16.jpg"/>
+			</div>
+			<!-- This is required for formatting reason -->
+			<img src="images/banners/bannerOverlayLo.png" class="faderlogo"/>
+		</div>
+				
+		<div id="content">
+			
+			<!-- About the club section -->
+			<div id="about-div">
+			 
+				<img src="images/topfade.png" class="fademax"/>
+				
+				<div id="about-panel">
+				
+					<div id="about">
+					
+						<h1>The Club</h1>
+						
+						<h2>About the Golden Ears Flying Club</h2>
+						
+						<ul>
+							<li>The Golden Ears Flying Club was established in 1959 and is one of the oldest flying clubs operating in British Columbia. Its fleet currently consists of two Cessna 172 aircraft: a 172E C-FHTI and a 172M C-GJYY. The aircraft are conveniently located at CYPK Pitt Meadows at the AeroClub of BC. We maintain a small roster of about 25 pilots which ensures lots of opportunity for bookings.</li>
+							<li>Bookings are made online and can be for as short as one hour, or, if you have the need for some real adventure &#45; twice a year you can book an aircraft for up to 12 days, or, of course, anything in between. There is never a minimum flight time associated with the bookings. Each aircraft has a US Customs Decal to assist in making flights to the USA.</li>
+							<li><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">More Info <i class="fa fa-chevron-down"></i></a></li>
+						</ul>
+						
+						<!-- Show and hide section -->
+						<div id="example" class="more">
+							<p>The club has a three way pricing structure.</p>
+							<ul>
+								<li><i class="fa fa-caret-right"></i> There is a non refundable initiation fee of &#36;3000.</li>
+								<li><i class="fa fa-caret-right"></i> Monthly charge of &#36;85 per month paid quarterly for fixed costs.</li>
+								<li><i class="fa fa-caret-right"></i> Hourly rate of &#36;87-&#36;90 per hour tach time (no taxes) depending on the plane. Tach time is usually the same as airtime &#45; about 0.2 to 0.3 less than Hobbs Time.</li>
+							</ul>
+							<p>The planes are all professionally maintained to night VFR standards and have been going through a series of upgrades in avionics and instrumentation.</p>
+							<p><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">Less Info <i class="fa fa-chevron-up"></i></a></p>
+						</div>
+						
+						<div id="contact-us-button">
+						
+							<a class="button blue-button" href="mailto:goldenearsflyingclub@gmail.com?Subject=Golden%20Ears%20Flying%20Club%20Info">Contact Us <i class="fa fa-envelope-o"></i></a>
+						
+						</div>
+					
+					</div>
+									
+				</div>
+			
+			</div>
+			
+			<div id="gallery-div">
+			
+				<img src="images/topfade.png" class="fademax"/>
+				
+				<div id="gallery-panel">
+					
+					<div id="gallery-panel-title">
+					
+						<h1>The Gallery</h1>
+						
+						<h2>Images and Videos from our Membership</h2>
+					
+					</div>
+					
+					<div id=gallery-jPages>
+						<!-- This id itemContainer is what loads the JPages gallery" -->
+						<ul id="itemContainer">
+							<!-- Add gallery images here, 300x600 thumbnails -->
+							<li><a href="images/gallery/0050.jpg" class="swipebox" title="JYY on the ramp at CYPK"><img src="images/gallery/thumbs/tm_0050.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0049.jpg" class="swipebox" title="JYY's New Paint"><img src="images/gallery/thumbs/tm_0049.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0048.jpg" class="swipebox" title="JYY's New Paint"><img src="images/gallery/thumbs/tm_0048.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0047.jpg" class="swipebox" title="JYY's New Paint"><img src="images/gallery/thumbs/tm_0047.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0046.jpg" class="swipebox" title="JYY's New Paint"><img src="images/gallery/thumbs/tm_0046.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0045.jpg" class="swipebox" title="JYY's New Paint"><img src="images/gallery/thumbs/tm_0045.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0044.jpg" class="swipebox" title="HTI Hope Camping"><img src="images/gallery/thumbs/tm_0044.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0043.jpg" class="swipebox" title="HTI Hope Camping"><img src="images/gallery/thumbs/tm_0043.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0042.jpg" class="swipebox" title="HTI Hope Camping"><img src="images/gallery/thumbs/tm_0042.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0041.jpg" class="swipebox" title="HTI Hope Camping"><img src="images/gallery/thumbs/tm_0041.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0040.jpg" class="swipebox" title="HTI New Engine"><img src="images/gallery/thumbs/tm_0040.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0039.jpg" class="swipebox" title="JYY Interior"><img src="images/gallery/thumbs/tm_0039.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0038.jpg" class="swipebox" title="JYY New Radios"><img src="images/gallery/thumbs/tm_0038.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0037.jpg" class="swipebox" title="JYY Skyhawk"><img src="images/gallery/thumbs/tm_0037.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0036.jpg" class="swipebox" title="HTI Tied Down"><img src="images/gallery/thumbs/tm_0036.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0035.jpg" class="swipebox" title="BC Interior"><img src="images/gallery/thumbs/tm_0035.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0034.jpg" class="swipebox" title="Pitt Meadows Airport"><img src="images/gallery/thumbs/tm_0034.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0033.jpg" class="swipebox" title="Qualicum Beach Airport"><img src="images/gallery/thumbs/tm_0033.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0032.jpg" class="swipebox" title="Courtney Airpark"><img src="images/gallery/thumbs/tm_0032.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0031.jpg" class="swipebox" title="Courtney AIrpark"><img src="images/gallery/thumbs/tm_0031.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0030.jpg" class="swipebox" title="Powell River Airport"><img src="images/gallery/thumbs/tm_0030.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0029.jpg" class="swipebox" title="Sechelt Airport"><img src="images/gallery/thumbs/tm_0029.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0028.jpg" class="swipebox" title="Pitt Meadows Airport"><img src="images/gallery/thumbs/tm_0028.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0027.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0027.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0026.jpg" class="swipebox" title="JYY at Pitt Meadows Airport"><img src="images/gallery/thumbs/tm_0026.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0025.jpg" class="swipebox" title=""><img src="images/gallery/thumbs/tm_0025.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0024.jpg" class="swipebox" title="JYY at Pitt Meadows Airport"><img src="images/gallery/thumbs/tm_0024.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0023.jpg" class="swipebox" title="Simon Fraser University"><img src="images/gallery/thumbs/tm_0023.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0022.jpg" class="swipebox" title="Strait of Georgia"><img src="images/gallery/thumbs/tm_0022.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0021.jpg" class="swipebox" title="Harrison Mills"><img src="images/gallery/thumbs/tm_0021.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0020.jpg" class="swipebox" title="Pitt River Valley"><img src="images/gallery/thumbs/tm_0020.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0019.jpg" class="swipebox" title="Pitt Lake"><img src="images/gallery/thumbs/tm_0019.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0018.jpg" class="swipebox" title="Golden Ears Park"><img src="images/gallery/thumbs/tm_0018.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0017.jpg" class="swipebox" title="Golden Ears Park"><img src="images/gallery/thumbs/tm_0017.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0016.jpg" class="swipebox" title="Golden Ears Park"><img src="images/gallery/thumbs/tm_0016.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0015.jpg" class="swipebox" title="Pitt River"><img src="images/gallery/thumbs/tm_0015.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0014.jpg" class="swipebox" title="Pitt River"><img src="images/gallery/thumbs/tm_0014.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0013.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0013.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0012.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0012.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0011.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0011.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0010.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0010.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0009.jpg" class="swipebox" title="Downtown Vancouver"><img src="images/gallery/thumbs/tm_0009.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0008.jpg" class="swipebox" title="West Vancouver"><img src="images/gallery/thumbs/tm_0008.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0007.jpg" class="swipebox" title="Sea to Sky Highway"><img src="images/gallery/thumbs/tm_0007.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0006.jpg" class="swipebox" title="Horseshoe Bay"><img src="images/gallery/thumbs/tm_0006.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0005.jpg" class="swipebox" title="Burnaby Mountian"><img src="images/gallery/thumbs/tm_0005.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0004.jpg" class="swipebox" title="Pitt Meadows"><img src="images/gallery/thumbs/tm_0004.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0003.jpg" class="swipebox" title="JYY Parked"><img src="images/gallery/thumbs/tm_0003.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0002.jpg" class="swipebox" title="JYY Mountians"><img src="images/gallery/thumbs/tm_0002.jpg" alt="image"></a></li>
+							<li><a href="images/gallery/0001.jpg" class="swipebox" title="JYY Vancouver"><img src="images/gallery/thumbs/tm_0001.jpg" alt="image"></a></li>
+						</ul>
+					</div>
+					
+					<!-- Gallery control buttons -->
+					<div id="customBtns">
+						<ul>
+							<li class="arrowPrev"><i class="fa fa-chevron-left fa-2x"></i></li>
+							<li><div class="holder"></div></li>
+							<li class="arrowNext"><i class="fa fa-chevron-right fa-2x"></i></li>
+						</ul>
+					</div>
+					
+					<!-- The swipebox full screen gallery launch code -->
+					<script type="text/javascript">
+						;( function( $ ) {
+						
+							$( '.swipebox' ).swipebox();
+						
+						} )( jQuery );
+					</script>
+							
+				</div>
+				
+			</div>
+			
+			<div id="aircraft-div">
+			
+				<img src="images/topfade.png" class="fademax"/>
+				
+				<div id="aircraft-panel">
+				
+					<div id="aircraft-panel-title">
+									
+						<h1>The Aircraft</h1>
+						
+						<h2>Information About our Aircraft</h2>
+					
+					</div>
+					
+					<div id="aircraft-panel-images"> 
+						<img src="images/aircraft.jpg" />
+					</div>
+						
+					</div>
+					
+					<div id="aircraft-panel-body">
+					
+						<div id="aircraft-panel-table">
+						
+							<div class="aircraft-list">
+							
+								<h2>Cessna 172 C-FHTI</h2>
+								
+								<ul>
+									<li>Model E</li>
+									<li>1964</li>
+									<li>Lycoming 0-320 E2D</li>
+									<li>160hp</li>
+									<li>Garmin GMA340 Audio Panel</li>
+									<li>Garmin GTR 225 Radio</li>
+								</ul>
+	
+							
+							</div>
+							
+							<div class="aircraft-list">
+							
+								<h2>Cessna 172 C-GJYY</h2>
+								
+								<ul>
+									<li>Model M</li>
+									<li>1973</li>
+									<li>Lycoming 0-320 E2D</li>
+									<li>160hp</li>
+									<li>Garmin GMA340 Audio Panel</li>
+									<li>Garmin GTR 225 Radio</li>
+								</ul>
+	
+							
+						</div>
+						
+						</div>
+						
+					</div>
+				
+				</div>
+							
+			<img src="images/bottomfade.png" class="fademax"/>
+			
+			</div>
+		
+		<div id="footer">
+		
+			<div id="footer-content">
+				
+				<div id="contact-us">
+					
+					<h2>Contact Us</h2>
+					
+					<ul>
+						<li>Golden Ears Flying Club</li>
+						<li>P.O. Box 31524, Pitt Meadows, B.C. V3Y2G7</li>
+						<li>Tel: 604-351-6851 (Club President, Peter C.)</li>
+						<li>Email: <a href="mailto:president@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">president@goldenearsflying.org</a></li>
+					</ul>
+				
+				</div>
+					
+				<div id="executives">
+				
+					<h2>Executive Committee</h2>
+							
+					<table>
+						<tr>
+							<td>Club President</td>
+							<td><a href="mailto:president@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Peter C.</a></td>
+						</tr>
+						<tr>
+							<td>Vice President</td>
+							<td><a href="mailto:vp@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Aslam N.</a></td>
+						</tr>
+						<tr>
+							<td>Treasurer</td>
+							<td><a href="mailto:treasurer@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Tim G.</a></td>
+						</tr>
+						<tr>
+							<td>Secretary</td>
+							<td><a href="mailto:secretary@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Justin R.</a></td>
+						</tr>
+						<tr>
+							<td>Crew Chief</td>
+							<td><a href="mailto:crewchief@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Kyle E.</a></td>
+						</tr>
+						<tr>
+							<td>Director of Membership</td>
+							<td><a href="mailto:membership@goldenearsflying.org?Subject=Golden%20Ears%20Flying%20Club%20Info" target="_top">Nick M.</a></td>
+						</tr>
+						<tr>
+							<td>Director</td>
+							<td>Erle L.</td>
+						</tr>
+					</table>
+					
+				</div>						
+			
+			</div>
+			
+			<div id="map">
+			
+				<div id="map_canvas">
+					<!-- The Google Maps JS is placed within this div by the script above -->
+				</div>
+						
+			</div>	
+			
+			<div id="copywrite">
+			
+				<p>&copy; 2014-2016 Golden Ears Flying Club.</p>
+			
+			</div>
+				
+		</div>
+		
+		<!-- Floating menu bar and login button -->
+		<div id="sub-banner">
+		
+			<div id="sub-banner-bar">
+		
+				<div id="link-list">
+				
+					<ul>
+						<li><a href="#about-div">The Club</a></li>
+						<li><a href="#gallery-panel">The Gallery</a></li>
+						<li><a href="#aircraft-panel">The Aircraft</a></li>
+						<li><a href="#footer">Contact Us</a></li>
+						<li><a href="links.htm">Links</a></li>
+						
+					</ul>
+				
+				</div>
+				
+				<div id="login">
+					<a id="modal_trigger" class="button blue-button" href="#modal">Member Login <i class="fa fa-chevron-right"></i></a>			
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<!-- Popup login dialog -->
+		<div id="modal" class="popupContainer" style="display:none;">
+			<header class="popupHeader">
+				<span class="header_title">Member Login</span>
+				<span class="modal_close"><i class="fa fa-times"></i></span>
+			</header>
+			
+			<section class="popupBody">
+				<!-- Username & Password Login form -->
+				<div class="user_login">
+					<form action="https://www.airfun.org/veeclava/login.php" method="post">
+						<label>Username</label>
+						<input name="id" type="text" />
+						<br />
+						
+						<label>Password</label>
+						<input name="pw" type="password" /><input name="club" type="hidden" value="gefc" />
+						<br />
+						
+						<div class="action_btns">
+							<ul>
+								<li><a href="#" class="button modal_close">Cancel</a></li>
+								<li><input name="" type="submit" class="button blue-button" value="Login" style="-webkit-appearance: none" ></li>
+							</ul>
+						</div>
+					</form>
+					
+				<a href="mailto:goldenearsflyingclub@gmail.com?Subject=Golden%20Ears%20Flying%20Club%20Forgot%20Password" class="forgot_password">Forgot password?</a>
+				</div>
+				
+			</section>
+		
+		</div>
+		
+		<script type="text/javascript">$("#modal_trigger").leanModal({top : 150, overlay : 0.5, closeButton: ".modal_close" });</script>
+
+	</div>
+
 </body>
+
 </html>
