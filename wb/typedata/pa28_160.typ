@@ -1,0 +1,15 @@
+typename=Piper Cherokee 160
+seatrows=2
+seatrow1arm=85.5
+seatrow2arm=118.1
+fuelarm=95.0
+fuelmax=298
+bag1max=200
+bag1arm=142.8
+bag2max=0
+bag2arm=123.0
+imagecode=pa28_160
+iminweight=1400
+imaxweight=2600
+imincg=76.0
+imaxcg=106.0

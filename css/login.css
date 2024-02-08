@@ -1,0 +1,85 @@
+﻿#lean_overlay {
+    position: fixed;
+    z-index:9999;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    font-size: 14px;
+    background: #000;
+    display: none;
+}
+
+.popupContainer{
+	position:absolute;
+	width:360px;
+	height: auto;
+	left:45%;
+	top:250px;
+	background: #FFF;
+	font-size: 14px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal_trigger {}
+
+#model {font-family: "Open Sans"; font-size : 14px; color: #666;}
+
+.btn {padding:10px 20px; background: #F4F4F2;}
+.btn_red {background: #ED6347; color: #FFF;}
+
+.btn:hover {background: #E4E4E2;}
+.btn_red:hover {background: #C12B05;}
+
+a.btn {color:#666; text-align: center; text-decoration: none;}
+a.btn_red {color: #FFF;}
+
+/* Popup Styles*/
+.popupHeader {font-family: "Open Sans"; color: #666; font-size:18px; font-variant:small-caps; letter-spacing:3px; }
+.popupHeader {background:#F4F4F2;
+	position:relative;
+	padding:15px 20px;
+	border-bottom:1px solid #DDD;
+	font-weight:bold;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.popupHeader .modal_close {position: absolute;
+	right: 0;
+	top:0;
+	padding:16px 20px;
+	background:#E4E4E2;
+	cursor: pointer;
+	color:#aaa;
+	font-size:16px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+}
+
+.popupBody {padding:20px;}
+
+.centeredText {text-align: center; margin: 20px 0; clear: both; overflow: hidden; text-transform: uppercase;}
+
+.action_btns {width: 100%; margin: auto; clear:both; overflow: hidden; display: inline-block;}
+.action_btns ul { width: 100%; }
+.action_btns ul li { display: inline; }
+
+/* User Login Form */
+.user_login {}
+.user_login label {font-family: "Open Sans"; font-size : 16px; color: #666; display: block; margin-bottom:5px;}
+.user_login input[type=text], .user_login input[type=email], .user_login input[type=password] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
+.user_login input[type=checkbox] {float:left; margin-right:5px;}
+.user_login input[type=checkbox] + label {float:left;}
+
+.user_login .checkbox {margin-bottom: 10px; clear: both; overflow: hidden;}
+.forgot_password {display:block; margin: 20px 0 10px; clear: both; overflow: hidden; text-decoration: none; font-size : 16px; color:#ED6347;}

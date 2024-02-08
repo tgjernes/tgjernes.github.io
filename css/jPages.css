@@ -1,0 +1,92 @@
+﻿.holder {
+}
+
+.holder a {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 13px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+}
+
+.holder a:hover {
+	background-color: #222;
+}
+
+.holder a.jp-previous {
+	margin-right: 15px;
+}
+
+.holder a.jp-next {
+	margin-left: 15px;
+}
+
+.holder a.jp-current, a.jp-current:hover {
+}
+
+.holder a.jp-disabled, a.jp-disabled:hover {
+}
+
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+	cursor: default;
+	background-color: #4195E9;
+}
+
+.arrowPrev i, .arrowNext i {
+	color: #CCCCCC;
+}
+
+.arrowPrev i:hover, .arrowNext i:hover {
+	color: #222;
+}
+
+.holder span {
+	margin: 0px;
+}
+
+#customBtns {
+	margin: 0px 0px 100px 0px;
+}
+
+#customBtns ul {
+	float: left;
+	position:relative;
+	left: 50%;
+}
+
+#customBtns ul li {
+	float: left;
+	position:relative;
+	right: 50%;
+}
+
+#gallery-jPages {
+	margin: 15px 0px;
+}
+
+#itemContainer {
+	text-align: center;
+	font-size: 0px;
+}
+
+#itemContainer li {
+	display: inline;
+}
+
+#itemContainer li a {
+}
+
+#itemContainer li a img {
+	padding: 2px;
+	-webkit-transition: all 0.25s linear;
+	-moz-transition: all 0.25s linear;
+	-ms-transition: all 0.25s linear;
+	-o-transition: all 0.25s linear;
+	transition: all 0.25s linear;
+}
+
+#itemContainer li a img:hover {
+	opacity: 0.6;
+}

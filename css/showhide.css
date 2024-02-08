@@ -1,0 +1,22 @@
+﻿.more {
+	display: none;
+}
+
+.more p {
+	padding: 10px 0px;
+}
+
+.more li {
+	padding: 10px 25px;
+}
+
+
+a.showLink, a.hideLink {
+	text-decoration: none;
+	color: #4195E9;
+	margin: 0px 25px;
+}
+
+a.showLink:hover, a.hideLink:hover {
+	color: #3175B9;
+}

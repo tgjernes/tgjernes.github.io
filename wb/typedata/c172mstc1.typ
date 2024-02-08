@@ -1,0 +1,15 @@
+typename=Cessna 172M w/STC
+seatrows=2
+seatrow1arm=37.0
+seatrow2arm=73.0
+fuelarm=48.0
+fuelmax=288
+bag1max=120
+bag1arm=95.0
+bag2max=50
+bag2arm=123.0
+imagecode=c172m_stc1
+iminweight=1300
+imaxweight=2500
+imincg=30.0
+imaxcg=50.0

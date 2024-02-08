@@ -1,0 +1,385 @@
+﻿/* CSS Style Reset */
+
+html, body { margin: 0; padding: 0; border: 0;
+				background: transparent; font-size:10px; }
+
+div, span, article, aside, footer, header, hgroup, nav, section,
+h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li,
+table, tr, th, td, tbody, tfoot, thead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+img { margin: 0; padding: 0; border: 0; }
+
+table, tr, th, td, tbody, tfoot, thead {
+	margin: 0; padding: 0; border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+input, select, textarea, form, fieldset {
+	margin: 0; padding: 0; border: 0;
+	}
+	
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+	display: block;
+	}
+
+h1, h2, h3, h4, h5, h6, p, li, blockquote, td, th, a, caption, em, strong, strike {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 100%;
+	text-indent: 0;
+	text-decoration: none;
+	text-align: left;
+	color: #000;
+	}
+
+ol, ul { list-style: none; }
+
+/* Global */
+
+html {	}
+body {	}
+
+#wrapper {
+	width: 100%;
+	min-width: 640px;
+	margin: 0px auto;
+	padding: 0px 0px;
+	font-size:0px;
+	z-index:0;
+}
+
+.fademax {
+	width: 100%;
+}
+	
+h1, h2, p, li, td, a {
+	font-family:"Open Sans";
+	letter-spacing:2px;
+}
+
+
+h1 {
+	font-size:60px;
+	font-variant:small-caps;
+	padding: 25px 0px;
+}
+
+h2 {
+	font-size:28px;
+	color:#5A5A5A;
+	padding: 15px 0px;
+}
+
+p, li, td {
+	font-size:18px;
+	color:#747474;
+	padding: 15px 0px;
+}
+
+a {
+	font-size:18px;
+	color:#4195E9;
+	text-decoration:underline;
+	padding: 5px 0px;
+}
+
+/* Banner */
+
+#banner img {
+	min-width: 640px;
+	width: 100%;
+}
+
+.faderandom {
+	max-height: 450px;
+	min-width: 640px;
+	width: 100%;
+}
+
+.faderandom img {
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.faderlogo {
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+
+/* Sub-Banner */
+
+#sub-banner {
+	height: 56px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+#sub-banner-bar {
+	height: 56px;
+	max-width: 1250px;
+	min-width: 640px;
+	margin: 0px auto;
+	padding: 0px 3px;
+	z-index:9998;
+	background-color: #FFFFFF;
+	border-bottom: 3px #DFDFDF solid;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+#link-list ul {
+	max-width: 80%;
+	float: left;
+}
+
+#link-list ul li {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	border-right: 1px #5A5A5A solid;
+}
+
+#link-list ul li a {
+	color:#5A5A5A;
+	font-size:16px;
+	font-variant:small-caps;
+	letter-spacing:0.2vw;
+	text-decoration:none;
+	padding: 13px 0.55vw;
+	margin: 6px 6px;
+	display: inline-block;
+	border-radius: 5px;
+	text-shadow: 0px -1px #DFDFDF;
+}
+
+#link-list ul li a:link {
+	color:#5A5A5A;
+}
+
+#link-list ul li a:visited {
+	color:#5A5A5A;
+}
+
+#link-list ul li a:active {
+	color:#5A5A5A;
+}
+
+#link-list ul li a:hover {
+	color:#5A5A5A;
+	background-color:#F4F4F4;
+	text-shadow: 0px -1px #C9C9C9;
+}
+
+#link-list ul li a:focus {
+	color:#5A5A5A;
+}
+
+#login {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* About Panel */
+
+#about-panel {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 50px;
+}
+
+#about {
+	float: left;
+}
+
+#about ul li {
+	line-height: 25px;
+}
+
+#contact-us-button {
+	float: right;
+	padding: 35px 0px;
+}
+
+/* Gallery Panel */
+
+#gallery-panel {
+	margin: 0px auto;
+	padding-bottom: 30px;
+}
+
+#gallery-panel-title {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 50px;
+}
+
+/* Aircraft Panel */
+
+#aircraft-panel-title {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 50px;
+}
+
+#aircraft-panel-images img {
+	width: 100%;
+}
+
+#aircraft-panel-body {
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+#aircraft-panel-table {
+	width: 100%;
+	display: table;
+	padding-bottom: 40px;
+}
+
+.aircraft-list {
+	padding: 15px;
+	display: table-cell;
+}
+
+.aircraft-list h2 {
+	padding: 30px 0px;
+	text-align: center;
+}
+
+.aircraft-list ul li {
+	max-width: 375px;
+	min-width: 220px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	text-align: center;
+	border-bottom: 1px #747474 solid;
+}
+
+
+/* Footer */
+
+#footer {
+	width: 100%;
+	height: 800px;
+	background-color: #747474;
+}
+
+#footer-content {
+	max-width: 1200px;
+	margin: 0px auto;
+	display: table;
+}
+
+#footer-content h2 {
+	font-variant:small-caps;
+	color:#F0F0F0;
+	margin: 10px 0px;
+	border-bottom: 1px #F0F0F0 solid;
+}
+
+#footer-content td, #footer-content li, #footer-content p {
+	color:#F0F0F0;
+	padding: 5px 0px;
+}
+
+#contact-us {
+	width: 50%;
+	padding: 25px;
+	display: table-cell;
+}
+
+#executives {
+	width: 50%;
+	padding: 25px;
+	display: table-cell;
+}
+
+#executives table {
+	width: 100%;
+}
+
+#map {
+	max-width: 1200px;
+	height: 350px;
+	padding: 20px 30px;
+	margin: 0px auto;
+}
+
+#map_canvas {
+	width: 100%;
+	height: 100%;
+}
+
+#copywrite {
+	width: 400px;
+	margin: 0px auto;
+}
+
+#copywrite p {
+	color: #999999;
+	text-align: center;
+}
+
+
+/* Big Buttons */
+
+.button {
+	color:#5A5A5A;
+	font-size:18px;
+	font-variant:small-caps;
+	text-align: center;
+	letter-spacing:3px;
+	line-height: normal;
+	text-decoration:none;
+	padding: 10px 20px;
+	margin: 5px 5px;
+	display: inline-block;
+	border-bottom: 3px #D4D4D4 solid;
+	background-color:#F4F4F2;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-shadow: 0px -1px #D4D4D4;
+}
+
+.button:hover {
+	background-color: #D4D4D4;
+	border-bottom: 3px #BFBFBF solid;
+	text-shadow: 0px -1px #BFBFBF;
+}
+
+.blue-button {
+	color:#F0F0F0;
+	border-bottom: 3px #2580DA solid;
+	background-color: #4195E9;
+	text-shadow: 0px -1px #2580DA;
+}
+
+.blue-button:hover {
+	background-color: #3175B9;
+	border-bottom: 3px #185592 solid;
+	text-shadow: 0px -1px #185592;
+}
